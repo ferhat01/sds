@@ -1,0 +1,44 @@
+{
+  "manifest_version": 2,
+  "name": "AmazonDropshippingTool",
+  "version": "0.1.1",
+  "author": "Emre Tekin - posta@emretekin.com.tr",
+  "description": "Detailed product list generator for Amazon dropshipping.",
+  "icons": {
+    "128": "icons/icon.png",
+    "16": "icons/icon.png",
+    "32": "icons/icon.png"
+  },
+  "browser_action": {
+    "default_popup": "assets/view/browser.html",
+    "default_title": "Amazon Dropshipping Tool"
+  },
+  "web_accessible_resources": [
+    "assets/view/panel.html",
+    "assets/view/panel-pasif.html"
+  ],
+  "content_scripts": [
+    {
+      "css": [
+        "assets/css/lib/bootstrap.min.css",
+        "assets/css/styles.css"
+      ],
+      "js": [
+        "assets/js/lib/jquery-1.12.4.min.js",
+        "assets/js/lib/bootstrap.min.js",
+        "assets/js/content.js",
+        "assets/js/engine.js"
+      ],
+      "matches": [
+        "*://*.amazon.com/*",
+        "*://*.amazon.co.uk/*",
+        "*://*.amazon.ca/*",
+        "*://*.amazon.in/*",
+        "*://*.pasifgeliriyigelir.com/*"
+      ]
+    }
+  ],
+  "permissions": [
+    "storage"
+  ]
+}
